@@ -53,11 +53,11 @@ public class SpringbootApplication {
         
     ```
 
-    ![image-20200312103213121](/NoteImgs/image-20200312103213121.png)
+    ![image-20200312103213121](NoteImgs/image-20200312103213121.png)
 
     自动配置核心文件：META-INF/spring.factories
 
-    ![image-20200312103414908](/NoteImgs/image-20200312103350057.png)
+    ![image-20200312103414908](NoteImgs/image-20200312103350057.png)
 
     ```java
     Properties properties = PropertiesLoaderUtils.loadProperties(resource);
@@ -108,7 +108,7 @@ public class SpringbootApplication {
    3. 找出所有的应用程序监听器，设置到listeners属性中
    4. 推断并设置main方法的定义类，找到运行的主类
 
-   ![run方法.png](/NoteImgs/run方法.png)
+   ![run方法.png](NoteImgs/run方法.png)
 
 # 配置文件
 
@@ -244,9 +244,9 @@ spring boot配置文件```application.properties```，到底可以配置哪些�
 
    **xxxProperties:封装配置文件中相关的属性**
    
-   ![image-20200724145558983](/NoteImgs/配置文件.png)
+   ![image-20200724145558983](NoteImgs/配置文件.png)
    
-   ![image-20200724145305902](/NoteImgs/自动配置.png)
+   ![image-20200724145305902](NoteImgs/自动配置.png)
 
 # SpringBoot Web开发
 
@@ -414,7 +414,7 @@ public class ThymeleafProperties {
 
 [官方文档](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-auto-configuration)
 
-![官方描述mvc拓展](NoteImgs\mvc拓展.png)
+![官方描述mvc拓展](NoteImgs/mvc拓展.png)
 
 示例：
 
