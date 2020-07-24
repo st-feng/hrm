@@ -414,7 +414,7 @@ public class ThymeleafProperties {
 
 [官方文档](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-auto-configuration)
 
-![官方描述mvc拓展](/NoteImgs/mvc拓展.png)
+![官方描述mvc拓展](NoteImgs\mvc拓展.png)
 
 示例：
 
