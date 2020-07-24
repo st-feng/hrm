@@ -39,7 +39,7 @@ public class SpringbootApplication {
 
 * 注解
 
-  ```
+  * ```java
     @SpringBootConfiguration :  springboot 的配置
         @Configuration ： spring 配置类
         	@Component ： 是一个sping 组件
@@ -53,13 +53,13 @@ public class SpringbootApplication {
         
     ```
 
-    ![image-20200312103213121](NoteImgs\image-20200312103213121.png)
+    ![image-20200312103213121](/NoteImgs/image-20200312103213121.png)
 
     自动配置核心文件：META-INF/spring.factories
 
-    ![image-20200312103414908](NoteImgs\image-20200312103350057.png)
+    ![image-20200312103414908](/NoteImgs/image-20200312103350057.png)
 
-    ```
+    ```java
     Properties properties = PropertiesLoaderUtils.loadProperties(resource);
     ```
 
@@ -108,7 +108,7 @@ public class SpringbootApplication {
    3. 找出所有的应用程序监听器，设置到listeners属性中
    4. 推断并设置main方法的定义类，找到运行的主类
 
-   ![run方法.png](NoteImgs\run方法.png)
+   ![run方法.png](/NoteImgs/run方法.png)
 
 # 配置文件
 
@@ -199,7 +199,7 @@ spring boot配置文件```application.properties```，到底可以配置哪些�
      port: 8082
    ```
    
-   ```
+   ```java
    /*
    * 使用yaml的配置文件
    * 在类上面加一个@configurationProperties(prifix = "person")
@@ -244,9 +244,9 @@ spring boot配置文件```application.properties```，到底可以配置哪些�
 
    **xxxProperties:封装配置文件中相关的属性**
    
-   ![image-20200724145558983](NoteImgs\配置文件.png)
+   ![image-20200724145558983](/NoteImgs/配置文件.png)
    
-   ![image-20200724145305902](NoteImgs\自动配置.png)
+   ![image-20200724145305902](/NoteImgs/自动配置.png)
 
 # SpringBoot Web开发
 
@@ -269,7 +269,7 @@ spring boot配置文件```application.properties```，到底可以配置哪些�
 ## 静态资源
 
 WebMvcAutoConfiguration包中的一个方法：
-```
+```java
 public void addResourceHandlers(ResourceHandlerRegistry registry) {
     if (!this.resourceProperties.isAddMappings()) {
         logger.debug("Default resource handling disabled");
@@ -298,7 +298,7 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
 ResourceProperties类中：
 
 
-```
+```java
 @ConfigurationProperties(prefix = "spring.resources", ignoreUnknownFields = false)
 public class ResourceProperties {
 
@@ -322,7 +322,7 @@ public class ResourceProperties {
 
 1. 静态页面
 
-```
+```java
 public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext applicationContext,
       FormattingConversionService mvcConversionService, ResourceUrlProvider mvcResourceUrlProvider) {
    WelcomePageHandlerMapping welcomePageHandlerMapping = new WelcomePageHandlerMapping(
@@ -362,7 +362,7 @@ private Resource getIndexHtml(String location) {
 
 接下来看一下 Thymeleaf 的自动装配属性
 
-```
+```java
 @ConfigurationProperties(prefix = "spring.thymeleaf")
 public class ThymeleafProperties {
 
@@ -414,7 +414,7 @@ public class ThymeleafProperties {
 
 [官方文档](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-auto-configuration)
 
-![官方描述mvc拓展](NoteImgs\mvc拓展.png)
+![官方描述mvc拓展](/NoteImgs/mvc拓展.png)
 
 示例：
 
